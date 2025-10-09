@@ -1,98 +1,117 @@
-<html>
-    <head>
-        {{!-- Animations CSS --}}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link rel="stylesheet" href="./style/css/landing.css">
-        <script defer src="../../modeDetect.js"></script>
-    </head>
-                    <div class="mainContainer" style="display: flex; flex-direction: row; ">
-                        <div class="portrait-container">
-                            <img src="portrait.jpeg" style="width: 150px; height = 150px; " alt="Descriptive image alt text">
-                        </div>    
-                        <div class="mainContainer" style="padding-left: 0;">
-                            <div class="js-type" id="first">{{name}}</div>
-                            <div id="second">{{title1}} | {{title2}}</div>
-                        </div>
-                    </div>
-                     <hr class="sep"></hr>
-
-            {{!-- Project Header --}}
-            <div class="mainContainer">
-                <div id="first">Projects</div>
-            </div>
-
-            <div class="mainContainer"> 
-                <div class="row">
-                    <div class="card">
-                        <a style='text-decoration: none;' href="https://github.com/mentaldropouts/collageApp" id="ProjectTitle">
-                            {{project1.title}}
-                        </a>
-                        <div class="card-body">
-                            {{project1.desc}}
-                        </div>                    
-
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="card">
-                        <a style='text-decoration: none;' href="https://github.com/mentaldropouts/PokemonDeciderApp" id="ProjectTitle">
-                            {{project2.title}}
-                        </a>
-                        <div class="card-body">
-                            {{project2.desc}}
-                        </div>  
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="card">
-                        <a style='text-decoration: none;' href="https://mentaldropouts.itch.io/lost-in-light-proto" id="ProjectTitle">
-                            {{project3.title}}
-                        </a>
-                        <div class="card-body">
-                            {{project3.desc}}
-                        </div>  
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website showcasing my projects and skills">
+    <title>{{name}} - Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./style/css/landing.css">
+    
+    <!-- Scripts -->
+    <script defer src="../../modeDetect.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
         <div class="mainContainer">
-                <div id="first" style="padding-top: 50px;">Links</div>
+            <div class="nav-content">
+                <a href="#home" class="nav-logo">{{name}}</a>
+                <div class="nav-links">
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
         </div>
-        <hr class="sep"></hr>
-            {{!-- <div class="mainContainer"> --}}
-            <div class="row" id="resumeButton">
-                <a style="text-decoration: none;" href={{button1.url}} download="TaylorPayneResume" id="third">         
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="mainContainer">
+            <div class="hero-content">
+                <div class="portrait-container">
+                    <img src="portrait.jpeg" alt="Professional portrait of {{name}}">
+                </div>
+                <div class="hero-text">
+                    <h1 class="js-type animate-fadeIn">{{name}}</h1>
+                    <h2 class="animate-fadeIn" style="animation-delay: 0.2s">{{title1}} | {{title2}}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+            
+    </section>"
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="mainContainer">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <a href="https://github.com/mentaldropouts/collageApp" class="project-link">
+                        <h3>{{project1.title}}</h3>
+                        <p class="project-description">{{project1.desc}}</p>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://github.com/mentaldropouts/PokemonDeciderApp" class="project-link">
+                        <h3>{{project2.title}}</h3>
+                        <p class="project-description">{{project2.desc}}</p>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://mentaldropouts.itch.io/lost-in-light-proto" class="project-link">
+                        <h3>{{project3.title}}</h3>
+                        <p class="project-description">{{project3.desc}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="mainContainer">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-links">
+                <a href={{button1.url}} download="TaylorPayneResume" class="button">
                     {{button1.text}}
                 </a>
-            </div>
-            <div class="row" id="transcriptButton">
-                <a style="text-decoration: none;" href={{button2.url}} download="Transcript" id="third"> 
+                <a href={{button2.url}} download="Transcript" class="button">
                     {{button2.text}}
                 </a>
-            </div>
-            <div class="row" id="githubButton">
-                <a style="text-decoration: none" href={{button3.url}} id="third">
+                <a href={{button3.url}} class="button" target="_blank" rel="noopener noreferrer">
                     {{button3.text}}
                 </a>
-            </div>
-             <div class="row" id="linkedinButton">
-                <a style="text-decoration: none" href={{button4.url}} id="third">
+                <a href={{button4.url}} class="button" target="_blank" rel="noopener noreferrer">
                     {{button4.text}}
                 </a>
+                <a href="mailto:taylorpaynedev@gmail.com" class="button">
+                    Contact Me
+                </a>
             </div>
-     
-            <div class="row" id="EmailButton">
-                <a style="text-decoration: none" href = "mailto: taylorpaynedev@gmail.com" id="third">Contact Me</a>
-                </div>
-            </div>
-     
-            
-              
-            {{!-- </div> --}}
-        {{!-- </div> --}}
         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="mainContainer">
+            <p>&copy; {{currentYear}} {{name}}. All rights reserved.</p>
         </div>
+    </footer>
+</body>
+</html>

@@ -8,7 +8,12 @@ console.log("Home was accessed");
 res.render('landing',{
         name: 'Taylor Payne',
         title1: 'UK',
-        title2: 'Computer Science Major',
+        title2: 'Software Engineer',
+        experience1: {
+                company:  'Health Compnay',
+                title:  'Associate Software Engineer',
+                desc: ''
+        },
         project1: {
                 title: 'Collage Maker',
                 desc: 'Started during the winter break of my Senior year at UK, I wanted to make an application \
@@ -25,7 +30,7 @@ res.render('landing',{
                 title: 'Lost in Light',
                 desc: 'Created for the 2022 64x64 game jam on itch.io, Lost in Light is a 3D exploration game built in Unity with C#. \
                  Players control a small, feline creature navigating a low-resolution world while evading larger predators that lurk in the shadows. \
-                The game features mechanics like stealth, optional combat, character dialogue, and exploration, with all assets creeated by me using Procreate and Blender.',
+                The game features mechanics like stealth, optional combat, character dialogue, and exploration, with all assets created by me using Procreate and Blender.',
         },
         button1: {
                 text: 'Resume',
