@@ -2,65 +2,72 @@ const express = require('express');
 const router = new express.Router();
 
 
+router.route('/music')
+.get((req, res) => {
+    console.log("Music page was accessed");
+    res.render('music', {
+        name: 'Taylor Payne',
+        currentYear: new Date().getFullYear()
+    });
+});
+
 router.route('/')   
 .get((req,res)=>{
 console.log("Home was accessed");
 res.render('landing',{
         name: 'Taylor Payne',
-        title1: 'UK',
-        title2: 'Software Engineer',
-        experience1: {
-                company:  'Health Compnay',
-                title:  'Associate Software Engineer',
-                desc: ''
-        },
+        title1: 'Software Engineer',
+        title2: 'Dog Lover',
+        aboutme: 'Hello! I am a Software Engineer based in London, KY. I graduated from the University of Kentucky in 2024 with a Bachelor\'s degree in Computer Science.',
+                experiences: [
+                        {
+                                company: 'Health Company',
+                                title: 'Associate Software Engineer',
+                                location: 'Remote',
+                                timeframe: 'June 2024 - Present',
+                                desc: 'Full Stack development of Route optimization and Scheduling Applications/Systems'
+                        },
+                        {
+                                company: 'University of Kentucky',
+                                title: 'Undergraduate Research',
+                                location: 'Lexington, KY',
+                                timeframe: 'Aug 2023 - December 2023',
+                                desc: 'Researched Health Datasets and usages of Machine Learning to improve diagnosis accuracy and speed.'
+                        }
+                ],
         project1: {
                 title: 'Collage Maker',
-                desc: 'Started during the winter break of my Senior year at UK, I wanted to make an application \
-                that allowed me to make collages of me and friends without having to do all the manual work that comes with \
-                collages. This application strives to automate the process of gathering photos, removing the background, and \
-                placing images together all in one easy-to-use place. Made completely in Python.',
+                desc: ' This application strives to automate the process of gathering photos, removing the background, and \
+                placing images together all in one easy-to-use place. You can connect a Pinterest or Google Photos account to \
+                import photos directly, or upload from your device. The app uses AI to remove backgrounds and an algorithm to place them optimally. \
+                Built entirely with Python.',
         },
         project2: {
                 title: 'Pokemon Decider Application',
                 desc: 'This AI-powered application assists Pokemon trainers by recommending the optimal sixth Pokemon to add to their five-person team. \
-                 It analyzes the strengths, weaknesses, and stats of the team to suggest the best fit. Made with React frontend and Flask backend.'
+                 It analyzes the strengths, weaknesses, and stats of the team to suggest the best fit. Utilizes a React frontend and  a Flask backend.'
         },
         project3: {
                 title: 'Lost in Light',
-                desc: 'Created for the 2022 64x64 game jam on itch.io, Lost in Light is a 3D exploration game built in Unity with C#. \
-                 Players control a small, feline creature navigating a low-resolution world while evading larger predators that lurk in the shadows. \
-                The game features mechanics like stealth, optional combat, character dialogue, and exploration, with all assets created by me using Procreate and Blender.',
+                desc: 'Created for the 2022 64x64 Game Jam, Lost in Light is an atmospheric 3D exploration game built in Unity with C#. \
+                Players guide a small, feline creature through a haunting low-resolution world, using stealth and optional combat mechanics to survive. \
+                Features dynamic lighting, character dialogue, and original artwork - all assets handcrafted by me using Procreate and Blender.'
         },
         button1: {
                 text: 'Resume',
                 url: './pdf/TaylorPayneResume.pdf',
         },
         button2: {
-                text: 'Transcript',
-                url: './pdf/Transcript.pdf',
+                text: 'GitHub',
+                url: 'https://github.com/taylorpaynedev'
         },
         button3: {
-                text: 'GitHub',
-                url: 'https://github.com/mentaldropouts'
-        },
-        button4: {
                 text: 'LinkedIn',
                 url: 'https://www.linkedin.com/in/taylorpaynedev/'
         },
 
 
 })});
-router.route('/gallery')   
-.get((req,res)=>{
-console.log("gallery was accessed");
-res.render('gallery');
-});
 
-router.route('/temp')   
-.get((req,res)=>{
-console.log("gallery was accessed");
-res.render('temp');
-});
 
 module.exports = router;

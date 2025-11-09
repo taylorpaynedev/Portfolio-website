@@ -23,7 +23,7 @@
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
   --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --shadow-lg: 0 20px 25px rgba(0,0,0,0.1);
   
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -60,8 +60,23 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+/* Section title underline */
+.section-title {
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 0.45rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
 /* Layout */
 .mainContainer {
+  max-width: 1200px;
+  min-height: 100px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+.navContainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-md);
@@ -69,23 +84,32 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-  padding-top: 163px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-lg);
 }
 
+.hero-content{
+  display: flex;
+}
+
 .portrait-container {
-  flex: 0 0 300px;
+  flex: 0 0 150px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .portrait-container img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: var(--shadow-lg);
 }
 
 /* Projects Section */
@@ -94,6 +118,40 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
+}
+
+/* Experience section layout */
+.experience-list {
+  display: grid;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.experience-item {
+  background: var(--white);
+  padding: var(--spacing-md);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.experience-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin: 0.25rem 0;
+}
+
+.experience-left {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.experience-timeframe {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  white-space: nowrap;
 }
 
 .project-card {
@@ -128,7 +186,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navigation */
 .nav {
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -148,15 +205,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-logo {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
     text-decoration: none;
-    transition: color var(--transition-fast);
+    transition: opacity var(--transition-fast);
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
 }
 
 .nav-logo:hover {
+    opacity: 0.85;
     color: var(--secondary);
 }
 

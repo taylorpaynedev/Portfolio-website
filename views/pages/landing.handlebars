@@ -23,10 +23,13 @@
     <nav class="nav">
         <div class="mainContainer">
             <div class="nav-content">
-                <a href="#home" class="nav-logo">{{name}}</a>
+                <a href="#home" class="nav-logo">
+                    <img src="./images/TaylorPayneLogo.png" alt="Taylor Payne Logo" class="nav-logo-img">
+                </a>
                 <div class="nav-links">
+                    <a href="#experience">Experience</a>
                     <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
+                    <a href="/music">Music</a>
                     <a href="#contact">Contact</a>
                 </div>
             </div>
@@ -43,6 +46,7 @@
                 <div class="hero-text">
                     <h1 class="js-type animate-fadeIn">{{name}}</h1>
                     <h2 class="animate-fadeIn" style="animation-delay: 0.2s">{{title1}} | {{title2}}</h2>
+                    <em class="animate-fadeIn" style="animation-delay: 0.3s">{{aboutme}}</em>
                 </div>
             </div>
         </div>
@@ -50,9 +54,31 @@
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
-            
-    </section>"
+        <div class="mainContainer">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-list">
+                {{#each experiences}}
+                    <div class="experience-item">
+                        <h3 class="experience-company">{{company}}</h3>
+                        <p class="experience-meta">
+                            <span class="experience-left">
+                                <strong class="experience-title">{{title}}</strong>
+                                <span class="experience-location"> — {{location}}</span>
+                            </span>
+                            <span class="experience-timeframe">{{timeframe}}</span>
+                        </p>
+                        {{#if desc}}<p class="experience-desc">{{desc}}</p>{{/if}}
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
 
+    <!-- Skills Section -->
+    {{!-- <section id="skills" class="skills">
+        <div class="mainContainer">
+        </div>
+    </section> --}}
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
@@ -88,17 +114,16 @@
         <div class="mainContainer">
             <h2 class="section-title">Get in Touch</h2>
             <div class="contact-links">
-                <a href={{button1.url}} download="TaylorPayneResume" class="button">
+                {{!-- TODO: Update resume link --}}
+                <a class="button">
+                {{!-- <a href={{button1.url}} download="TaylorPayneResume" class="button"> --}}
                     {{button1.text}}
                 </a>
-                <a href={{button2.url}} download="Transcript" class="button">
+                <a href={{button2.url}} class="button" target="_blank" rel="noopener noreferrer">
                     {{button2.text}}
                 </a>
                 <a href={{button3.url}} class="button" target="_blank" rel="noopener noreferrer">
                     {{button3.text}}
-                </a>
-                <a href={{button4.url}} class="button" target="_blank" rel="noopener noreferrer">
-                    {{button4.text}}
                 </a>
                 <a href="mailto:taylorpaynedev@gmail.com" class="button">
                     Contact Me

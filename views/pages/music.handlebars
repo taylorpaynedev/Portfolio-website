@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Music portfolio for Taylor Payne">
+    <title>{{name}} - Music</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./style/css/landing.css">
+    <link rel="stylesheet" href="./style/css/music.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="mainContainer">
+            <div class="nav-content">
+                <a href="/" class="nav-logo">
+                    <img src="./images/TaylorPayneLogo.png" alt="Taylor Payne Logo" class="nav-logo-img">
+                </a>
+                <div class="nav-links">
+                    <a href="/#experience">Experience</a>
+                    <a href="/#projects">Projects</a>
+                    <a href="/music">Music</a>
+                    <a href="/#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Music Section -->
+    <section class="music-section">
+        <div class="mainContainer">
+            <h1 class="section-title animate-fadeIn">My Current Rotation</h1>
+            <div class="music-grid">
+                                <!-- Row 1 -->
+                {{!-- <a href="https://after95.bandcamp.com/album/after-ep-2" class="album-card" target="_blank" rel="noopener noreferrer"> --}}
+                <div class="album-card">
+                    <div class="album-cover"><img class="album-image" src="./images/albums/AfterEP2.jpg" alt="After 2 EP Cover" /></div>
+                    <div class="album-info">
+                        <h3>After 2 EP</h3>
+                        <p>After</p>
+                    </div>
+                </div>
+                {{!-- </a> --}}
+                
+                {{!-- <a href="https://royblair.lnk.to/chasingmovingtrains" class="album-card" target="_blank" rel="noopener noreferrer"> --}}
+                <div class="album-card">
+                    <div class="album-cover"><img class="album-image" src="./images/albums/CMT.jpeg" alt="Chasing Moving Trains Cover" /></div>
+                    <div class="album-info">
+                        <h3>Chasing Moving Trains</h3>
+                        <p>Roy Blair</p>
+                    </div>
+                </div>
+                {{!-- </a> --}}
+
+
+                <div class="album-card">
+                    <div class="album-cover"><img class="album-image" src="./images/albums/VHS.jpeg" alt="Vanisher Horizon Scraper Cover" /></div>
+                    <div class="album-info">
+                        <h3>Vanisher, Horizon Scraper</h3>
+                        <p>Quadeca</p>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-cover"><img class="album-image" src="./images/albums/chokeenough.jpg" alt="Choke Enough Cover" /></div>
+                    <div class="album-info">
+                        <h3>Choke Enough</h3>
+                        <p>Oklou</p>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-cover"><img class="album-image" src="./images/albums/glassjaw.jpg" alt="Glass Jaw Cover" /></div>
+                    <div class="album-info">
+                        <h3>Glass Jaw</h3>
+                        <p>Aries</p>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="album-card">
+                    <div class="album-cover"><img class="album-image" src="./images/albums/ilovemycomputer.jpg" alt="I Love My Computer Cover" /></div>
+                    <div class="album-info">
+                        <h3>I Love My Computer</h3>
+                        <p>NinaJirachi</p>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-cover"><img class="album-image" src="./images/albums/revengeseekerz.jpg" alt="Revengeseekerz Cover" /></div>
+                    <div class="album-info">
+                        <h3>Revengeseekerz</h3>
+                        <p>Jane Remover</p>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-cover"><img class="album-image" src="./images/albums/egodeath.jpg" alt="Ego Death At a Bachelorette Party Cover" /></div>
+                    <div class="album-info">
+                        <h3>Ego Death At a Bachelorette Party</h3>
+                        <p>Haley Williams</p>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-cover"><img class="album-image" src="./images/albums/fatherfigure.jpg" alt="Father Figure Cover" /></div>
+                    <div class="album-info">
+                        <h3>Father Figure</h3>
+                        <p>Jon Bellion</p>
+                    </div>
+                </div>
+
+                <div class="album-card">
+                    <div class="album-cover"><img class="album-image" src="./images/albums/snoey.jpg" alt="SNOEY Cover" /></div>
+                    <div class="album-info">
+                        <h3>SNOEY</h3>
+                        <p>Zack Villere</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="mainContainer">
+            <p>&copy; {{currentYear}} {{name}}. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
